@@ -1,0 +1,178 @@
+body,
+html {
+  min-height: 100%;
+}
+*,
+*::after,
+*::before,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color--grey: #757575;
+  --color-purple--: #a445ed;
+}
+body {
+  padding: 3rem 33%;
+  font-family: "system-ui", "sans-serif", "League Spartan";
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+ul {
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  height: 50px;
+}
+.options {
+  display: flex;
+}
+.options select {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+}
+.options input[type="checkbox"] {
+  margin-left: 20px;
+}
+.contain-font {
+  padding: 0 20px;
+  border-right: 1px solid grey;
+}
+.searchbar {
+  width: 100%;
+  margin-top: 30px;
+  height: 45px;
+  border-radius: 0.7rem;
+  padding: 0 20px;
+  border: none;
+  background-color: #e9e9e9;
+}
+.searchbar::placeholder {
+  color: #3a3a3a;
+}
+.section {
+  padding-top: 2rem;
+}
+h1#word {
+  font-size: 3rem;
+}
+#phonetic {
+  color: #a445ed;
+}
+.meaning {
+  width: 100%;
+  line-height: 1.4rem;
+}
+.def {
+  padding: 10px;
+  width: 90%;
+}
+#meantext {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color--grey);
+}
+#pos {
+  margin-top: 1rem;
+  font-weight: bold;
+  position: relative;
+}
+#pos::after {
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  content: "";
+  color: var(--color--grey);
+  background-color: var(--color--grey);
+  width: 85%;
+  padding: 0.078px;
+  opacity: 0.4;
+}
+#source {
+  font-size: 0.9rem;
+  color: var(--color--grey);
+  padding-right: 20px;
+}
+.word-container {
+  display: flex;
+  justify-content: space-between;
+}
+input[type="search"]:focus {
+  border-color: var(--color-purple--);
+  outline: var(--color-purple--);
+}
+#window img {
+  width: 2%;
+}
+#fonts,
+#fonts:active,
+#fonts:focus {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+#moon {
+  width: 1rem;
+}
+#check{
+    display: none;
+}
+#label{
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 3rem;
+    background-color: var(--color-purple--);
+    position: relative;
+    cursor: pointer;
+}
+#label span{
+    position: absolute;
+    top: 0;
+    left:0;
+    /* padding: 5px; */
+    height: 100%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: white;
+}
+.color{
+    padding: 0 10px;
+}
+#check:not(:checked) + label{
+    background-color: #1F1F1F
+
+}
+#check:checked + label span{
+    left: calc(100% - 20px);
+}
+#error{
+    padding-top: 20px;
+    font-size: .85rem;
+    color: #757575;
+}
+
+@media only screen and (max-width: 600px)  {
+    body{
+        padding: 3rem 3%;
+    }
+    #pos::after {
+        left: 17%;
+        width: 82%;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Dictionary web app</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="" />
+        </div>
+        <div class="options">
+          <div class="contain-font">
+            <select name="fonts" id="fonts" data-font="font">
+              <option value="system-ui">Default</option>
+              <option value="League Spartan">League Spartan</option>
+              <option value="sans-serif">Sans Serif</option>
+              <option value="serif">Serif</option>
+              <option value="monospace">Mono</option>
+            </select>
+          </div>
+          <div class="color">
+            <input type="checkbox" name="" id="check" />
+            <label for="check" name="check" id="label">
+                <span></span>
+            </label>
+            <img id="moon" src="./assets/images/icon-moon.svg" alt="">
+          </div>
+        </div>
+      </nav>
+
+      <input type="search" placeholder="Search for any word..." class="searchbar" id="searchbar" />
+    </header>
+    <section class="section">
+      <div class="word-container" id="word-container">
+        <div>
+          <h1 id="word"></h1>
+          <span id="phonetic"></span>
+        </div>
+      </div>
+      <div class="meaning" id="meaning">
+
+      </div>
+      <span id="source"></span>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
